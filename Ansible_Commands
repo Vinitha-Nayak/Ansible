@@ -1,0 +1,5 @@
+Login to the slave nodes using master nodes
+
+#create a key pairs in ansible server
+ssh-keygen
+
