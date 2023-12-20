@@ -1,0 +1,16 @@
+---
+- name: INSTALL AND START NGNIX
+  hosts: all
+  become: true
+
+  tasks:
+  - name: Install nginx
+    ansible.builtin.yum:
+      name: nginx
+      state: present
+
+  - name: Start nginx
+    ansible.builtin.systemd:
+      service: nginx
+      state: started
+

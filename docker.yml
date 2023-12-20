@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Install the latest version of docker
+      yum:
+        name: docker
+        state: latest
+    - name: Make sure a service unit is running for docker
+      service:
+        state: started
+        name: docker
+        enabled: yes

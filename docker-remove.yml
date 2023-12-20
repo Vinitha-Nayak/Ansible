@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Uninstall the latest version of docker
+      yum:
+        name: docker
+        state: absent
